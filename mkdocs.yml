@@ -27,7 +27,7 @@ theme:
         name: 切换至亮色模式
   # 启用 Datawhale 风格的功能
   features:
-    - navigation.tabs        # 顶部导航栏
+    # - navigation.tabs        # 顶部导航栏 (已禁用，以使用左侧导航)
     - navigation.sections    # 侧边栏折叠
     - navigation.top         # 返回顶部按钮
     - navigation.indexes     # 允许章节本身作为页面
