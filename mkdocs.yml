@@ -1,9 +1,85 @@
-site_name: Happy Python 🚀
+site_name: Happy Python: 快乐编程指南
+site_description: 一个不枯燥、不劝退、以解决有趣问题为目标的 Python 入门教程。
+site_author: 你的名字
+site_url: https://fyzm.github.io/happy-python/
+
+# 仓库链接 (右上角显示 GitHub 图标)
+repo_url: https://github.com/fyzm/happy-python
+repo_name: happy-python
+edit_uri: edit/main/docs/
+
 theme:
   name: material
+  language: zh
+  # 亮色/暗色模式切换
   palette:
-    primary: indigo
+    - scheme: default
+      primary: indigo 
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换至深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至亮色模式
+  # 启用 Datawhale 风格的功能
   features:
-    - navigation.instant
-    - navigation.tracking
-    - content.code.copy
+    - navigation.tabs        # 顶部导航栏
+    - navigation.sections    # 侧边栏折叠
+    - navigation.top         # 返回顶部按钮
+    - navigation.indexes     # 允许章节本身作为页面
+    - search.suggest         # 搜索建议
+    - search.highlight       # 搜索高亮
+    - content.code.copy      # 代码块复制按钮
+    - content.action.edit    # 允许用户编辑页面
+
+# 必要的 Markdown 扩展插件
+markdown_extensions:
+  - admonition               # 提示框 (!!! tip)
+  - pymdownx.details         # 折叠块
+  - pymdownx.superfences     # 高级代码块
+  - pymdownx.highlight:      # 代码高亮配置
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets        # 代码片段嵌入
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:     # 数学公式支持
+      generic: true
+  - attr_list                # 属性列表
+  - md_in_html
+
+# 完整的课程大纲导航
+nav:
+  - 首页: index.md
+  - 第0章 环境搭建:
+      - 0.1 为什么是Python: chapter0/why_python.md
+      - 0.2 安装工具: chapter0/setup.md
+      - 0.3 Hello World: chapter0/hello.md
+      - 0.4 遇到 Bug 怎么办: chapter0/debug.md
+  - 第1章 基础语法:
+      - 1.1 变量: chapter1/variables.md
+      - 1.2 字符串: chapter1/strings.md
+      - 1.3 数字计算: chapter1/numbers.md
+      - 1.4 列表: chapter1/lists.md
+      - 1.5 字典: chapter1/dicts.md
+  - 第2章 流程控制:
+      - 2.1 条件判断: chapter2/if_else.md
+      - 2.2 循环: chapter2/loops.md
+      - 2.3 综合实战-文字游戏: chapter2/game.md
+  - 第3章 函数与模块:
+      - 3.1 函数: chapter3/functions.md
+      - 3.2 模块Import: chapter3/modules.md
+      - 3.3 第三方库Pip: chapter3/pip.md
+  - 第4章 文件与数据:
+      - 4.1 读写文件: chapter4/files.md
+      - 4.2 Excel自动化: chapter4/excel.md
+      - 4.3 爬虫初体验: chapter4/crawler.md
+  - 第5章 快乐实战:
+      - 5.1 文件整理机器人: chapter5/organizer.md
+      - 5.2 可视化看板: chapter5/visualization.md
+      - 5.3 AI聊天机器人: chapter5/ai_bot.md
+  - 第6章 扩展路线: chapter6/roadmap.md
