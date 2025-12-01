@@ -1,0 +1,9 @@
+site_name: Happy Python 🚀
+theme:
+  name: material
+  palette:
+    primary: indigo
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
